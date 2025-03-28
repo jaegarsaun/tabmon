@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Tamagotchi Pet",
+    "version": "1.0",
+    "description": "Take care of your virtual pet inside Chrome!",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+
+      }
+    },
+    "permissions": ["storage", "alarms", "idle"],
+    "host_permissions": ["https://*/*"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["frontend/popup.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "backend/service.js",
+      "type": "module"
+    }
+  }
+  
