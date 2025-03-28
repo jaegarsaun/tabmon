@@ -1,1 +1,1 @@
-README
+A Chrome Extension that resembles the famous "tamagotchi" game 
