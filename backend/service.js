@@ -23,11 +23,11 @@ async function dropStats(){
     if(ran % 2 == 0){
         console.log('drop happy')
         stats.happyLevel = Math.max(0, stats.happyLevel - 1);
-        updateHappyStat(stats.happyLevel);
+        await updateHappyStat(stats.happyLevel);
     }else{
         console.log('drop hunger')
         stats.hungerLevel = Math.max(0, stats.hungerLevel - 1);
-        updateHungerStat(stats.hungerLevel);
+        await updateHungerStat(stats.hungerLevel);
     }
 }
 
