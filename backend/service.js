@@ -6,40 +6,6 @@ async function initializeStats() {
     await chrome.storage.local.set({ happyLevel: 5, hungerLevel: 5, lifeLevel: 5 });
 }
 
-
-
-// // // Happiness & Hunger
-// // Function to decide when stats should drop
-// function updateStats() {
-//     console.log('updateing')
-//     chrome.storage.local.get(['happyLevel', 'hungerLevel'], (result) => {
-//         // Parse the ints!!!
-//         let happyLevel = parseInt(result.happyLevel);
-//         let hungerLevel = parseInt(result.hungerLevel);
-
-//         // If these are zero, dont do anything else. Later on we can track this and decide when the pet dies rip
-//         if (happyLevel === 0 && hungerLevel === 0) {
-//             return;
-//         }
-
-//         let ran1 = Math.floor(Math.random() * 10);
-//         let ran2 = Math.floor(Math.random() * 10);
-//         // 70% chance to deduct a stat level from the character's stats
-//         if (ran1 < 7) {
-//             happyLevel = Math.max(0, happyLevel - 1);
-//         }
-
-//         if (ran2 < 7) {
-//             hungerLevel = Math.max(0, hungerLevel - 1);
-//         }
-//         // Update the stats
-//         // chrome.storage.local.set({ happyLevel, hungerLevel }, () => {
-//         //     console.log('Stats updated:', { happyLevel, hungerLevel });
-//         // });
-//         chrome.storage.local.set({ happyLevel, hungerLevel });
-//     });
-// }
-
 async function dropStats(){
     const stats = await getStats();
     console.log('dropping stats')
