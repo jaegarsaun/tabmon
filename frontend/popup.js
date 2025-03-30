@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check to see if the stats were changed in the service worker
     chrome.storage.onChanged.addListener((changes, areaName) => {
+        console.log(' init changing stats')
         if (areaName === 'local') {
             initStats();
         }

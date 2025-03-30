@@ -1,6 +1,7 @@
 import { getStats } from './stats.js';
 
 export async function initStats() {
+    console.log('changing stats')
     // Get the parent containers from the dom
     const happyParent = document.getElementById("happiness");
     const hungerParent = document.getElementById("hunger");
