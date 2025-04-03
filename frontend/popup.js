@@ -1,5 +1,4 @@
-import { interact } from './stats.js';
-import { initStats } from './ui.js';
+import { initStats, interact } from './ui.js';
 import { animate } from './animation/sprite.js';
 
 document.addEventListener('DOMContentLoaded', () => {
