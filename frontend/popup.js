@@ -1,6 +1,6 @@
 import { interact } from './stats.js';
 import { initStats } from './ui.js';
-import { startAnimation } from './animation.js';
+import { animate } from './animation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Interaction buttons
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Call the initial functions
     initStats();
-    startAnimation();
+    animate();
 
     // Check to see if the stats were changed in the service worker
     chrome.storage.onChanged.addListener((changes, areaName) => {
