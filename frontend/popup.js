@@ -1,6 +1,6 @@
 import { interact } from './stats.js';
 import { initStats } from './ui.js';
-import { animate } from './animation.js';
+import { animate } from './animation/sprite.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Interaction buttons
